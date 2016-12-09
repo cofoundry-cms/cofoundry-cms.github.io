@@ -1,0 +1,15 @@
+// fonts
+// ----------------------------------- //
+$font-default: helvetica, arial, sans-serif;
+
+// base typography styles
+// ----------------------------------- //
+
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    font-size: 100%;
+    font-family: $font-default;
+    line-height: 1.5rem;
+    color: $color-black;
+}

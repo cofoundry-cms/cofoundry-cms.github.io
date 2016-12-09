@@ -1,0 +1,17 @@
+// Normalize.css
+@import "../node_modules/normalize.css/normalize.css";
+
+// Helpers and utilities
+@import "./utils/imports";
+
+// Base style imports
+@import "./base/settings",
+    "./base/base",
+    "./base/animations",
+    "./base/typography";
+
+// Element styles
+@import "./elements/imports";
+
+// Component styles
+@import "./components/imports";

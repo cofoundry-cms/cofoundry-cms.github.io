@@ -1,0 +1,7 @@
+.modal {
+    background-color: $color-white;
+    width: 50%;
+    height: auto;
+    padding: 50px;
+    @include centered();
+}

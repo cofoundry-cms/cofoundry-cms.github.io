@@ -1,0 +1,17 @@
+########################################################################
+# ****DO NOT STORE CREDENTIALS OR ENVIRONMENT RELATED INFO IN REPO**** #
+########################################################################
+
+*.log
+
+.sass-cache/*
+
+*.DS_Store
+
+_logs
+_tests
+error.log
+
+node_modules/
+node_modules
+
