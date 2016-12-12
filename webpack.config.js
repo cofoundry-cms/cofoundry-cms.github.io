@@ -1,14 +1,14 @@
 var path = require('path'),
-	webpack = require('webpack'),
-	ExtractTextPlugin = require('extract-text-webpack-plugin'),
-	StyleLintPlugin = require('stylelint-webpack-plugin'),
-	precss = require('precss'),
-	autoprefixer = require('autoprefixer'),
-	BASE_PATH = './',
-	SCSS_PATH = BASE_PATH + 'scss',
-	Styles_PATH = BASE_PATH + 'styles',
-	SCRIPTS_PATH = BASE_PATH + 'scripts',
-	SRC_PATH = BASE_PATH + 'js';
+    webpack = require('webpack'),
+    ExtractTextPlugin = require('extract-text-webpack-plugin'),
+    StyleLintPlugin = require('stylelint-webpack-plugin'),
+    precss = require('precss'),
+    autoprefixer = require('autoprefixer'),
+    BASE_PATH = './',
+    SCSS_PATH = BASE_PATH + 'scss',
+    Styles_PATH = BASE_PATH + 'styles',
+    SCRIPTS_PATH = BASE_PATH + 'scripts',
+    SRC_PATH = BASE_PATH + 'js';
 
 require('core-js');
 
@@ -53,7 +53,14 @@ module.exports = {
 			{
 				test: /\.scss$/,
 				loader: ExtractTextPlugin.extract('css-loader?sourceMap!postcss-loader?pack=cleaner!sass-loader?sourceMap=true&sourceMapContents=true')
-			}
+			},
+            {
+                test: /\.(jpe?g|png|gif|svg)$/i,
+                loaders: [
+                    'file?hash=sha512&digest=hex&name=[hash].[ext]',
+                    'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
+                ]
+            }
 		]
 	},
 	postcss: function () {

@@ -1,0 +1,22 @@
+.btn {
+    background-color: $color-green;
+    border: 3px solid $color-green;
+    border-radius: 50px;
+    display: inline-block;
+    height: 50px;
+    width: 260px;
+    color: $color-purple;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 50px;
+    text-decoration: none;
+
+    & + .btn {
+        margin-left: 20px;
+    }
+}
+
+.btn--secondary {
+    background-color: transparent;
+    color: $color-white;
+}

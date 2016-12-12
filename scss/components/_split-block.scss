@@ -1,0 +1,31 @@
+.split-block {
+    @include clearfix;
+    width: 100%;
+    position: relative;
+}
+
+.split-block__image {
+    display: block;
+    width: 62%;
+    max-width: 640px;
+    float: left;
+}
+
+.split-block__text {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30%;
+}
+
+.split-block--reverse {
+    .split-block__image {
+        float: right;
+    }
+
+    .split-block__text {
+        right: auto;
+        left: 0;
+    }
+}

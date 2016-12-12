@@ -45,7 +45,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(1);
-	module.exports = __webpack_require__(4);
+	module.exports = __webpack_require__(5);
 
 
 /***/ },
@@ -57,16 +57,17 @@
 /***/ },
 /* 2 */,
 /* 3 */,
-/* 4 */
+/* 4 */,
+/* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _utils = __webpack_require__(5);
+	var _utils = __webpack_require__(6);
 	
 	var _utils2 = _interopRequireDefault(_utils);
 	
-	var _pageAbout = __webpack_require__(6);
+	var _pageAbout = __webpack_require__(7);
 	
 	var _pageAbout2 = _interopRequireDefault(_pageAbout);
 	
@@ -83,7 +84,7 @@
 	console.log(_pageAbout2.default.getTest());
 
 /***/ },
-/* 5 */
+/* 6 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -98,7 +99,7 @@
 	};
 
 /***/ },
-/* 6 */
+/* 7 */
 /***/ function(module, exports) {
 
 	'use strict';

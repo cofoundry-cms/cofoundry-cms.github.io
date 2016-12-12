@@ -1,0 +1,34 @@
+.intro-block {
+    background: url("../dist/images/page-header-bg.jpg") no-repeat left top;
+    background-size: cover;
+    width: 100%;
+    padding: 150px 0;
+    position: relative;
+    color: white;
+}
+
+.intro-block__content {
+    text-align: center;
+    width: 62%;
+    margin: 0 auto;
+
+    h2 {
+        color: white;
+        margin-bottom: 2.5rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+        line-height: 2.188rem;
+        margin-bottom: 3.125rem;
+    }
+}
+
+.intro-block--header {
+    padding: 0;
+    height: 700px;
+
+    .intro-block__content {
+        @include centered();
+    }
+}
