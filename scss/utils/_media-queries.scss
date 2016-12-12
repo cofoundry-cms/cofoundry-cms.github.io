@@ -1,0 +1,43 @@
+// Returns media queries
+$deafult-max: 0;
+
+@mixin media($min, $max: $deafult-max) {
+    @if (($max != 0) and $min) {
+        @media screen and (min-width: em($min)) and (max-width: em($max)) {
+            @content;
+        }
+    }
+    @elseif ($max != 0) {
+        @media screen and (max-width: em($max)) {
+            @content;
+        }
+    }
+    @else {
+        @media screen and (min-width: em($min)) {
+            @content;
+        }
+    }
+}
+
+// Converts px to em from a base context
+$browser-context: 16; // Default
+
+@function em($pixels, $context: $browser-context) {
+    @if unitless($pixels) {
+        @return ($pixels/$context) * 1em;
+    }
+    @elseif (unit($pixels) == "px") {
+        @return (strip-units($pixels)/$context) * 1em;
+    }
+    @elseif (unit($pixels) == "em") {
+        @return $pixels;
+    }
+    @else {
+        @return $pixels * 1em;
+    }
+}
+
+// Removes units from a size string
+@function strip-units($number) {
+    @return $number / ($number * 0 + 1);
+}

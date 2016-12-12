@@ -1,22 +1,28 @@
 .info-grid {
-    @include clearfix();
     width: 100%;
     text-align: center;
     margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .info-grid__item {
-    float: left;
-    width: calc(33% - (40px / 3));
-    margin-right: 20px;
-    margin-bottom: 100px;
-
-    &:nth-of-type(3n) {
-        margin-right: 0;
-    }
+    width: 100%;
+    margin-bottom: 50px;
 
     img {
-        margin: 0 auto 50px;
+        margin: 0 auto 25px;
         display: block;
+    }
+
+    @include media($tablet) {
+        width: 30%;
+        margin-bottom: 100px;
+
+        img {
+            margin: 0 auto 50px;
+            display: block;
+        }
     }
 }

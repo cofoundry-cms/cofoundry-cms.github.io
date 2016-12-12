@@ -1,6 +1,11 @@
 .logo {
     width: 202px;
     position: absolute;
-    left: 50px;
-    top: 50px;
+    left: 5%;
+    top: 20px;
+
+    @include media($desktop) {
+        left: 50px;
+        top: 50px;
+    }
 }

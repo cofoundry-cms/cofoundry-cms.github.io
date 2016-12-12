@@ -2,14 +2,19 @@
     background: url("../dist/images/page-header-bg.jpg") no-repeat left top;
     background-size: cover;
     width: 100%;
-    padding: 150px 0;
+    padding: 75px 0;
     position: relative;
     color: white;
+
+    @include media($tablet) {
+        padding: 150px 0;
+    }
 }
 
 .intro-block__content {
     text-align: center;
-    width: 62%;
+    width: 90%;
+    max-width: 880px;
     margin: 0 auto;
 
     h2 {
@@ -18,15 +23,28 @@
     }
 
     p {
-        font-size: 1.5rem;
-        line-height: 2.188rem;
-        margin-bottom: 3.125rem;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    @include media($tablet) {
+        p {
+            font-size: 1.5rem;
+            line-height: 2.188rem;
+            margin-bottom: 3.125rem;
+        }
+    }    
+
+    @include media($desktop) {
+        width: 62%;
     }
 }
 
 .intro-block--header {
     padding: 0;
-    height: 700px;
+    height: 100vh;
+    max-height: 700px;
 
     .intro-block__content {
         @include centered();

@@ -15,32 +15,36 @@ html {
 }
 
 h1 {
-    font-size: 2.25rem;
-    line-height: 3.438rem;
+    font-size: 2rem;
+    line-height: 3rem;
     margin-top: 0;
-    margin-bottom: 3.125rem;
+    margin-bottom: 3rem;
 }
 
 h2 {
-    font-size: 2.25rem;
-    line-height: 2.688rem;
+    font-size: 1.75rem;
+    line-height: 2.25rem;
     margin-top: 0;
-    margin-bottom: 5rem;
+    margin-bottom: 2.25rem;
     color: $color-purple;
+
+    & + div {
+        margin-top: 4rem;
+    }
 }
 
 h3 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
     margin-top: 0;
-    margin-bottom: .938rem;
+    margin-bottom: .875rem;
 }
 
 p {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
     margin-top: 0;
-    margin-bottom: 1.75rem;
+    margin-bottom: 1.5rem;
 }
 
 hr {
@@ -48,4 +52,34 @@ hr {
     margin: 0 0 .938rem;
     border-style: none;
     border-top: 3px solid $color-green;
+}
+
+@include media($tablet) {
+    h1 {
+        font-size: 2.25rem;
+        line-height: 3.438rem;
+        margin-bottom: 3.125rem;
+    }
+
+    h2 {
+        font-size: 2.25rem;
+        line-height: 2.688rem;
+        margin-bottom: 2.5rem;
+
+        & + div {
+            margin-top: 5rem;
+        }
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+        margin-bottom: .938rem;
+    }
+
+    p {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        margin-bottom: 1.75rem;
+    }
 }

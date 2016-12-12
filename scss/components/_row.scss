@@ -2,6 +2,12 @@
     background-color: $color-grey;
 
     .content-block {
-        padding: 100px 20px;
+        padding: 75px 20px;
+    }
+
+    @include media($tablet) {
+        .content-block {
+            padding: 100px 20px;
+        }
     }
 }
