@@ -14,7 +14,11 @@
         margin: 0 auto 80px;
     }
 
+    &:last-of-type {
+        padding-bottom: 0;
+    }
+
     @include media($tablet) {
-        padding: 150px 20px;
+        padding: 120px 20px;
     }
 }

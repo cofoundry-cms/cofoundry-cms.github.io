@@ -1,0 +1,36 @@
+%social-icon {
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 25px;
+    width: 25px;
+    margin-right: 20px;
+    display: block;
+}
+
+.social-icon--twitter {
+    @extend %social-icon;
+    background-image: url("/dist/images/icons/social-twitter.png");
+    width: 30px;
+}
+
+.social-icon--facebook {
+    @extend %social-icon;
+    background-image: url("/dist/images/icons/social-facebook.png");
+}
+
+.social-icon--github {
+    @extend %social-icon;
+    background-image: url("/dist/images/icons/social-github.png");
+}
+
+.social-icon--rss {
+    @extend %social-icon;
+    background-image: url("/dist/images/icons/social-rss.png");
+    width: 26px;
+}
+
+.social-icon--email {
+    @extend %social-icon;
+    // background-image: url("/dist/images/icons/social-email.png");
+}
